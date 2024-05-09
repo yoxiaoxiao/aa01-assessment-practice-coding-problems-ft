@@ -80,8 +80,8 @@ When you are ready to submit:
 3. The actual submission is a three-part process: you need to _add_ your changed
    files to the staging area, _commit_ them, and _push_ them to GitHub. (Don't
    worry if these concepts are still a bit fuzzy; you will become very familiar
-   with them over the course of the bootcamp!) You can accomplish by running the
-   following commands:
+   with them over the course of the bootcamp!) You can accomplish this by
+   running the following commands:
 
    a. To add your files to the staging area, run `git add .` (Don't forget to
       include the period at the end!)
