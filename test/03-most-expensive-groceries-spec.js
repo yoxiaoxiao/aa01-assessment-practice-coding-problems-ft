@@ -62,7 +62,7 @@ function formatFile (cb) {
   const fs = require('fs');
   const path = require('path');
   const args = [
-    /(function\s+costOfGroceries\()|((?<=\n\s*)(const|let|var)?\s*costOfGroceries\s*=\s*function\s*\()|((?<=\n\s*)(const|let|var)?\s*costOfGroceries\s*=\s*\((?=.*=>))/g,
+    /(function\s+costOfGroceries\s*\()|((?<=\n\s*)(const|let|var)?\s*costOfGroceries\s*=\s*function\s*\()|((?<=\n\s*)(const|let|var)?\s*costOfGroceries\s*=\s*\((?=.*=>))/g,
     "exports.costOfGroceries = function (",
     /=>/g,
     "",
