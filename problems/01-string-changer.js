@@ -15,14 +15,23 @@ modified in some way. The operations are:
 */
 
 function stringChanger(word, operation) {
-  // Your code here 
+  if (operation === "capitalize") {
+    return word[0].toUpperCase() + word.slice(1);
+  } else if (operation === "uppercase") {
+    return word.toUpperCase();
+  } else if (operation === "double") {
+    return word.repeat(2);
+  }else if (operation === "reverse") {
+    return word.split("").reverse().join("");
+  } else {
+    return word;
+  }
 }
 
-// console.log(stringChanger('foo', 'capitalize')); // 'Foo'
-// console.log(stringChanger('foo', 'uppercase'));  // 'FOO'
-// console.log(stringChanger('foo', 'double'));     // 'foofoo'
-// console.log(stringChanger('foo', 'reverse'));    // 'oof'
-// console.log(stringChanger('foo', 'unknown'));    // 'foo'
-
+console.log(stringChanger('foo', 'capitalize')); // 'Foo'
+console.log(stringChanger('foo', 'uppercase'));  // 'FOO'
+console.log(stringChanger('foo', 'double'));     // 'foofoo'
+console.log(stringChanger('foo', 'reverse'));    // 'oof'
+console.log(stringChanger('foo', 'unknown'));    // 'foo'
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = stringChanger;

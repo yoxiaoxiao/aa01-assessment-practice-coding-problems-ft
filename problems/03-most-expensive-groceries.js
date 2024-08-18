@@ -20,33 +20,57 @@ mostExpensiveGroceries function to solve the problem.
 */
 
 function costOfGroceries(groceries) {
-  // Your code here 
+  let totalCost = 0
+  for (let i = 0; i < groceries.length; i++) {
+    if (groceries[i] === "butter") {
+      totalCost += 1;
+    } else if (groceries[i] === "eggs") {
+      totalCost += 2;
+    } else if (groceries[i] === "milk") {
+      totalCost += 3;
+    } else if (groceries[i] === "bread") {
+      totalCost += 4;
+    } else if (groceries[i] === "cheese") {
+      totalCost += 5;
+    }
+  }
+  return totalCost;
 }
 
 function mostExpensiveGroceries(groceriesList) {
-  // Your code here 
+  let maxCost = 0;
+  let maxIndex = -1;
+  for (let i = 0; i < groceriesList.length; i++) {
+    let currCost = costOfGroceries(groceriesList[i]);
+    if (currCost > maxCost) {
+      maxCost = currCost;
+      maxIndex = i;
+    }
+  }
+  return maxIndex;
+  
 }
 
 
-// const groceriesA = ['cheese', 'butter', 'eggs'];
-// const groceriesB = ['eggs', 'milk', 'bread', 'bread'];
-// const groceriesC = ['cheese', 'bread'];
-// const groceriesD = ['eggs', 'butter'];
+const groceriesA = ['cheese', 'butter', 'eggs'];
+const groceriesB = ['eggs', 'milk', 'bread', 'bread'];
+const groceriesC = ['cheese', 'bread'];
+const groceriesD = ['eggs', 'butter'];
 
-// console.log(costOfGroceries(groceriesA)); // 8
-// console.log(costOfGroceries(groceriesB)); // 13
-// console.log(costOfGroceries(groceriesC)); // 9
-// console.log(costOfGroceries(groceriesD)); // 3
+console.log(costOfGroceries(groceriesA)); // 8
+console.log(costOfGroceries(groceriesB)); // 13
+console.log(costOfGroceries(groceriesC)); // 9
+console.log(costOfGroceries(groceriesD)); // 3
 
-// console.log(mostExpensiveGroceries(
-//   [groceriesA, groceriesB, groceriesC, groceriesD]
-// )); //=> 1
-// console.log(mostExpensiveGroceries(
-//   [groceriesA, groceriesD]
-// )); //=> 0
-// console.log(mostExpensiveGroceries(
-//   [groceriesA, groceriesD, groceriesC]
-// )); //=> 2
+console.log(mostExpensiveGroceries(
+  [groceriesA, groceriesB, groceriesC, groceriesD]
+)); //=> 1
+console.log(mostExpensiveGroceries(
+  [groceriesA, groceriesD]
+)); //=> 0
+console.log(mostExpensiveGroceries(
+  [groceriesA, groceriesD, groceriesC]
+)); //=> 2
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
